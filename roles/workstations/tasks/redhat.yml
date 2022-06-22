@@ -1,0 +1,38 @@
+---
+#
+### Configuration for any workstation running a RedHat distribution.
+#
+
+- name: "sublime text key"
+  rpm_key:
+    state: present
+    key: https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+
+
+- name: "add gpg key, repo, and install sublime-text"
+  yum_repository:
+    name: sublime-text 
+    description: sublime-text stable
+    baseurl: https://download.sublimetext.com/rpm/stable/x86_64
+    enabled: yes
+    gpgcheck: yes 
+
+- name: "repo package installation"
+  dnf:
+    update_cache: yes
+    name:
+      - vim
+      - lutris
+      - tree
+      - git
+      - python3-pip
+      - tmux
+      - thunderbird
+      - godot
+      - starship
+      - sublime-text
+      - htop
+    state: latest
+
+- include_tasks: flatpaks.yml
+- include_tasks: gnome.yml

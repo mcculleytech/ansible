@@ -1,0 +1,7 @@
+---
+- name: configure workstations
+  hosts: localhost
+  tasks:
+  become: yes
+  roles: 
+    - 'roles/workstations'
