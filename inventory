@@ -1,0 +1,8 @@
+[internal]
+omvprd.server.mcculley.tech
+pihole.server.mcculley.tech
+rheldev.server.mcculley.tech
+
+[external]
+dockerprd.dmz.mcculley.tech
+archprd.dmz.mcculley.tech
