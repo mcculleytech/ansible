@@ -1,0 +1,19 @@
+---
+
+## run autoremove
+- name: 'apt autoremove'
+  apt:
+    autoremove: yes
+
+- name: 'apt upgrade'
+  apt:
+    upgrade: 'yes'
+    update_cache: yes
+
+- name: 'apt autoremove'
+  apt:
+    autoremove: yes
+
+- name: 'apt autoclean'
+  apt:
+    autoclean: yes
