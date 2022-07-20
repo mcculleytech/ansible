@@ -2,6 +2,7 @@
 omvprd.server.mcculley.tech
 pihole.server.mcculley.tech
 rheldev.server.mcculley.tech
+localhost
 
 [external]
 dockerprd.dmz.mcculley.tech

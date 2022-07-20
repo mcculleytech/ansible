@@ -1,0 +1,22 @@
+---
+
+- name: 'dnf autoremove'
+  dnf:
+    autoremove: yes
+
+- name: 'dnf security upgrades'
+  dnf:
+    name: '*'
+    state: latest
+    security: yes
+    update_cache: yes
+
+- name: 'dnf package upgrades'
+  dnf:
+    name: '*'
+    state: 'latest'
+
+- name: 'dnf autremove'
+  dnf:
+    autoremove: yes
+    

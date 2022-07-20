@@ -1,0 +1,15 @@
+---
+
+- name: 'Check for reboot after update'
+  shell: needs-restarting -r
+  register: kernel_reboot
+  ignore_errors: yes
+
+- name: 'display if reboot is needed.'
+  debug:
+    var: kernel_reboot.rc
+
+- name: 'reboots after kernel update if needed'
+  reboot:
+    reboot_timeout: 300
+  when: kernel_reboot.rc == 1
